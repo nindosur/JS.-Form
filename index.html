@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /* 3 */
+    #output {
+        font-size: 16px;
+        color: #000;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+    }
+    
+    </style>
+</head>
+<body>
+<!-- 1 -->
+<h2>Задание 1</h2>
+<h2>Сообщения:</h2>
+<ul id="message-list"></ul>
+
+<h2>Добавить сообщение:</h2>
+<form id="message-form">
+    <input type="text" id="author" placeholder="Имя автора" required>
+    <br>
+    <textarea id="content" placeholder="Текст сообщения" required></textarea>
+    <br>
+    <input type="submit" value="Отправить">
+</form>
+
+<!-- 2 -->
+<h2>Задание 2</h2>
+<form id="quiz-form">
+    <h4>Вопрос 1:</h4>
+    <p>Какой язык программирования из списка является декларативным?</p>
+    <input type="radio" name="q1" value="a"> HTML<br>
+    <input type="radio" name="q1" value="b"> JavaScript<br>
+
+    <h4>Вопрос 2:</h4>
+    <p>Какая из следующих тегов используется для заголовка веб-страницы?</p>
+    <input type="radio" name="q2" value="a"> &lt;header&gt;<br>
+    <input type="radio" name="q2" value="b"> &lt;h1&gt;<br>
+
+    <br>
+    <input type="submit" value="Отправить">
+</form>
+
+<div id="result" style="display: none;">
+    <h2>Результат:</h2>
+    <p id="score">Количество правильных ответов: </p>
+</div>
+
+<!-- 3 -->
+<h2>Задание 3</h2>
+<form id="text-form">
+    <label for="text">Введите текст:</label>
+    <input type="text" id="text" name="text" required>
+    <br>
+
+    <label for="font-size">Размер шрифта (px):</label>
+    <input type="number" id="font-size" name="font-size" required>
+    <br>
+
+    <label for="color">Цвет текста:</label>
+    <input type="color" id="color" name="color" required>
+    <br>
+
+    <label for="bold">Жирный:</label>
+    <input type="checkbox" id="bold" name="bold">
+    <br>
+
+    <label for="italic">Курсив:</label>
+    <input type="checkbox" id="italic" name="italic">
+    <br>
+
+    <label for="underline">Подчеркнутый:</label>
+    <input type="checkbox" id="underline" name="underline">
+    <br>
+
+    <br>
+    <input type="submit" value="Отправить">
+</form>
+<h3>Результат:</h3>
+<div id="output"></div>
+
+<!-- 4 -->
+<h2>Задание 4</h2>
+<form id="order-form">
+    <label for="book">Выберите книгу:</label>
+    <select id="book" name="book" required>
+      <option value="Когда цветы заговорят...">Книга: "Когда цветы заговорят..."</option>
+      <option value="Новое поколение">Книга: "Новое поколение"</option>
+      <option value="Забери меня">Книга: "Забери меня"</option>
+    </select>
+    <br>
+
+    <label for="quantity">Количество экземпляров:</label>
+    <input type="number" id="quantity" name="quantity" required>
+    <br>
+
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="delivery-date">Дата доставки:</label>
+    <input type="date" id="delivery-date" name="delivery-date" required>
+    <br>
+
+    <label for="address">Адрес доставки:</label>
+    <input type="text" id="address" name="address" required>
+    <br>
+
+    <label for="comment">Комментарий:</label>
+    <textarea id="comment" name="comment"></textarea>
+    <br>
+
+    <br>
+    <input type="submit" value="Заказать">
+</form>
+
+<div id="order-details" style="display: none;">
+    <h2>Информация о заказе:</h2>
+    <p id="order-info"></p>
+</div>
+
+<!-- 5 -->
+<h2>Задание 5</h2>
+<form id="attendance-form">
+    <label for="group">Выберите группу:</label>
+    <select id="group" name="group" required>
+        <option value="group1">Группа 1</option>
+        <option value="group2">Группа 2</option>
+        <option value="group3">Группа 3</option>
+    </select>
+    <br>
+
+    <label for="lecture">Выберите пару:</label>
+    <select id="lecture" name="lecture" required>
+        <option value="lecture1">Пара 1</option>
+        <option value="lecture2">Пара 2</option>
+        <option value="lecture3">Пара 3</option>
+    </select>
+    <br>
+
+    <label for="topic">Тема занятия:</label>
+    <input type="text" id="topic" name="topic" required>
+    <br>
+
+    <fieldset>
+        <legend>Отметьте присутствующих:</legend>
+        <input type="checkbox" id="student1" name="student1">
+        <label for="student1">Студент 1</label>
+        <br>
+        <input type="checkbox" id="student2" name="student2">
+        <label for="student2">Студент 2</label>
+        <br>
+        <input type="checkbox" id="student3" name="student3">
+        <label for="student3">Студент 3</label>
+        <br>
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Отметить">
+</form>
+<button onclick="showAttendance()">Показать отмеченные пары</button>
+
+<div id="attendance-list" style="display: none;">
+    <h2>Отмеченные пары:</h2>
+    <ul id="attendance-info"></ul>
+</div>
+
+<!-- 6 -->
+<h2>Задание 6</h2>
+<form id="booking-form">
+    <label for="direction">Выберите направление:</label>
+    <select id="direction" name="direction" required>
+        <option value="Пермь-Москва">Пермь-Москва</option>
+        <option value="Пермь-Саратов">Пермь-Саратов</option>
+        <option value="Пермь-Челябинск">Пермь-Челябинск</option>
+    </select>
+    <br>
+
+    <label for="date">Дата поездки:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+
+    <fieldset>
+        <legend>Выберите места для брони:</legend>
+        <input type="checkbox" id="seat1" name="seat1">
+        <label for="seat1">Место 1</label>
+        <br>
+        <input type="checkbox" id="seat2" name="seat2">
+        <label for="seat2">Место 2</label>
+        <br>
+        <input type="checkbox" id="seat3" name="seat3">
+        <label for="seat3">Место 3</label>
+        <br>
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Забронировать">
+</form>
+
+<button onclick="showBookings()">Показать забронированные билеты</button>
+
+<div id="booking-list" style="display: none;">
+    <h2>Забронированные билеты:</h2>
+    <ul id="booking-info"></ul>
+</div>
+
+
+
+<script>
+//1
+document.getElementById("message-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    var author = document.getElementById("author").value;
+    var content = document.getElementById("content").value;
+
+    var messageItem = document.createElement("li");
+    messageItem.innerHTML = "<strong>" + author + ":</strong> " + content;
+
+    document.getElementById("message-list").appendChild(messageItem);
+
+    document.getElementById("author").value = "";
+    document.getElementById("content").value = "";
+});
+
+//2
+document.getElementById("quiz-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    var q1Answer = document.querySelector('input[name="q1"]:checked').value;
+    var q2Answer = document.querySelector('input[name="q2"]:checked').value;
+
+    var score = 0;
+    if (q1Answer === "a") {
+        score++;
+    }
+    if (q2Answer === "b") {
+        score++;
+    }
+
+    document.getElementById("score").textContent += score;
+    document.getElementById("result").style.display = "block";
+});
+
+//3
+document.getElementById("text-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var text = document.getElementById("text").value;
+    var fontSize = document.getElementById("font-size").value + "px";
+    var color = document.getElementById("color").value;
+    var bold = document.getElementById("bold").checked;
+    var italic = document.getElementById("italic").checked;
+    var underline = document.getElementById("underline").checked;
+
+    var outputElement = document.getElementById("output");
+    outputElement.textContent = text;
+    outputElement.style.fontSize = fontSize;
+    outputElement.style.color = color;
+    outputElement.style.fontWeight = bold ? "bold" : "normal";
+    outputElement.style.fontStyle = italic ? "italic" : "normal";
+    outputElement.style.textDecoration = underline ? "underline" : "none";
+});
+
+//4
+document.getElementById("order-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var book = document.getElementById("book").value;
+    var quantity = document.getElementById("quantity").value;
+    var name = document.getElementById("name").value;
+    var deliveryDate = document.getElementById("delivery-date").value;
+    var address = document.getElementById("address").value;
+    var comment = document.getElementById("comment").value;
+
+    var orderInfoElement = document.getElementById("order-info");
+    orderInfoElement.textContent = name + ", спасибо за заказ.\n Товар '" + book + "' будет доставлен " +
+        " " + deliveryDate + " по адресу " + address + ".";
+    if (comment) {
+        orderInfoElement.textContent += " Комментарий: " + comment;
+    }
+
+    document.getElementById("order-details").style.display = "block";
+});
+
+//5
+var groups = ["Группа 1", "Группа 2", "Группа 3"];
+    var lectures = ["Пара 1", "Пара 2", "Пара 3"];
+    var attendance = [];
+
+    document.getElementById("attendance-form").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        var group = document.getElementById("group").value;
+        var lecture = document.getElementById("lecture").value;
+        var topic = document.getElementById("topic").value;
+
+        var attendedStudents = [];
+        var students = document.querySelectorAll('input[type="checkbox"]');
+        for (var i = 0; i < students.length; i++) {
+            if (students[i].checked) {
+                attendedStudents.push(students[i].nextSibling.textContent);
+            }
+        }
+
+    attendance.push({ group: group, lecture: lecture, topic: topic, attendedStudents: attendedStudents });
+
+    document.getElementById("topic").value = "";
+    for (var i = 0; i < students.length; i++) {
+        students[i].checked = false;
+    }
+});
+
+    function showAttendance() {
+        var attendanceInfoElement = document.getElementById("attendance-info");
+        attendanceInfoElement.innerHTML = "";
+
+        for (var i = 0; i < attendance.length; i++) {
+            var listItem = document.createElement("li");
+            listItem.textContent = attendance[i].group + " - " + attendance[i].lecture + ": " + attendance[i].attendedStudents.length + " присутствующих студентов";
+            attendanceInfoElement.appendChild(listItem);
+        }
+
+        document.getElementById("attendance-list").style.display = "block";
+    }
+
+//6
+var directions = ["Направление 1", "Направление 2", "Направление 3"];
+    var bookings = [];
+
+document.getElementById("booking-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    var direction = document.getElementById("direction").value;
+    var date = document.getElementById("date").value;
+
+    var bookedSeats = [];
+    var seats = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < seats.length; i++) {
+        if (seats[i].checked) {
+        bookedSeats.push(seats[i].nextSibling.textContent);
+        }
+    }
+
+    bookings.push({ direction: direction, date: date, bookedSeats: bookedSeats });
+
+    document.getElementById("date").value = "";
+    for (var i = 0; i < seats.length; i++) {
+        seats[i].checked = false;
+    }
+});
+
+// Функция для показа забронированных билетов
+function showBookings() {
+    var bookingInfoElement = document.getElementById("booking-info");
+    bookingInfoElement.innerHTML = "";
+
+      // Вывести информацию о бронировании
+    for (var i = 0; i < bookings.length; i++) {
+        var listItem = document.createElement("li");
+        listItem.textContent = bookings[i].direction + " - " + bookings[i].date + ": " + "забронировано " + bookings[i].bookedSeats.length + " мест";
+        bookingInfoElement.appendChild(listItem);
+    }
+
+    document.getElementById("booking-list").style.display = "block";
+}
+
+
+</script>
+
+</body>
+</html>
